@@ -1,0 +1,42 @@
+Imagine you build a Node.js application on your Mac.
+
+Your application needs:
+
+Node.js 22
+npm
+PostgreSQL
+Redis
+Kafka
+
+Environment variables
+System libraries
+Specific npm package versions
+
+Everything works perfectly on your machine.
+
+Then you give the project to another developer.
+
+They install:
+
+Node.js 20
+PostgreSQL 16
+different Redis version
+They run:
+
+npm install
+npm run dev
+
+And suddenly:
+
+❌ Application doesn't work
+❌ Dependency error
+❌ Database connection error
+❌ Node version mismatch
+
+Then they tell you:
+"Bro, your project isn't working."
+
+And you say:
+"It works on my machine!" 😄
+
+This is one of the major problems Docker helps solve.

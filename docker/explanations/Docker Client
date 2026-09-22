@@ -1,0 +1,6 @@
+Docker Client is the command-line interface through which we interact with Docker.
+When you type:
+docker ps
+or:
+docker run nginx
+you're using the Docker CLI/client.

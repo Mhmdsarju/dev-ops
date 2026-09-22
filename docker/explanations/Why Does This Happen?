@@ -1,0 +1,19 @@
+Because an application doesn't depend only on your source code.
+
+It also depends on the environment.
+
+For example:
+
+Application
+    │
+    ├── Node.js version
+    ├── npm version
+    ├── OS
+    ├── System libraries
+    ├── Dependencies
+    ├── Database
+    ├── Redis
+    ├── Environment variables
+    └── Configuration
+
+If these differ between machines, the application can behave differently.

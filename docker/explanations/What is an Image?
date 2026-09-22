@@ -1,0 +1,15 @@
+A Docker Image is an immutable, versioned package/template containing the filesystem and metadata needed to create a container.
+
+It can contain:
+
+- Application code
+- Runtime
+- Libraries
+- Dependencies
+- System files
+- Configuration
+- Startup instructions
+
+Think:
+
+Image = Blueprint / Template

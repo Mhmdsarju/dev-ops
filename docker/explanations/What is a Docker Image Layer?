@@ -1,0 +1,14 @@
+A Docker image is built from a series of filesystem layers.
+
+Each Dockerfile instruction that changes the filesystem can contribute a layer to the resulting image.
+
+Conceptually:
+┌──────────────────────────┐
+│ Application source code  │ ← Layer
+├──────────────────────────┤
+│ npm dependencies         │ ← Layer
+├──────────────────────────┤
+│ Node.js / base files     │ ← Layer
+├──────────────────────────┤
+│ Base image               │ ← Layer
+└──────────────────────────┘

@@ -1,0 +1,20 @@
+A container is a running instance of a Docker image.
+
+Mostly useful mental model:
+Container = running instance of an image
+
+But technically a container can also exist in a created/stopped state without currently running.
+
+For example:
+Created
+Running
+Paused
+Stopped
+Exited
+
+So don't think:
+
+container always means running.
+
+Better:
+Container is a runtime instance created from an image; it may be running or stopped.

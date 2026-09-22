@@ -1,0 +1,67 @@
+Docker CLI (Command Line Interface) is the command-line tool used to communicate with Docker.
+
+For example:
+
+docker ps - Shows currently running containers.
+
+docker --version - Check Docker Version
+
+docker info - detailed information about docker
+
+docker help - for Docker commands list
+
+docker pull - from registry to local machine image download 
+
+docker images - see downloaded images 
+
+docker run -d nginx - Detached mode. The container runs in the background.
+
+docker ps -a - show all  containers
+
+docker stop name - Stop the container.
+
+docker start web - stopped containers again start 
+
+docker restart web - Useful when you want to restart an existing container.
+
+docker rm web - remove the container
+
+docker rm -f web - You can force-remove a running container
+
+docker rmi nginx / docker image rm nginx - remove the image
+
+docker logs container-name - for see logs 
+
+docker logs -f resolvehub-backend - New logs keep appearing
+
+docker exec -it my-container sh - You want to execute a command inside the container.
+
+docker inspect my-container - Need detailed metadata about a container? This returns detailed JSON.
+
+docker stats - You can see live metrics
+
+docker cp - Copy files between host and container.
+
+Host → Container:
+docker cp ./file.txt my-container:/app/file.txt
+Container → Host:
+docker cp my-container:/app/log.txt ./log.txt
+
+docker system prune - Cleanup command
+
+docker system prune -a - is more aggressive.
+
+docker create nginx - This creates a container but does not start it.
+
+docker build -t resolvehub-backend:1.0 .
+
+docker run --name backend-new resolvehub-backend:1.0
+
+for creating volume 
+
+docker volume create mysql-data - after
+
+docker run -d \
+  --name mysql \
+  -v mysql-data:/var/lib/mysql \
+  mysql

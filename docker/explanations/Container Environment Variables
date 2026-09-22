@@ -1,0 +1,11 @@
+Container Environment Variables
+
+You can pass environment variables:
+
+docker run -e NODE_ENV=production my-node-app
+
+Inside container:
+
+NODE_ENV=production
+
+Later environment variables and secrets-ஐ dedicated topic-ல் properly discuss பண்ணுவோம்.

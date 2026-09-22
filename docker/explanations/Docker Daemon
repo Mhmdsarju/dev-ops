@@ -1,0 +1,6 @@
+The Docker Daemon (dockerd) is the background service responsible for managing Docker objects such as:
+- Images
+- Containers
+- Networks
+- Volumes
+It receives requests from Docker clients and performs the actual Docker operations.

@@ -1,0 +1,47 @@
+Imagine production:
+
+Backend Container
+Something breaks.
+
+Bad approach:
+
+Enter container
+ ↓
+Manually modify files
+ ↓
+Restart
+
+Now nobody knows exactly what changed.
+
+Better:
+Fix Dockerfile/code
+      ↓
+Build new image
+      ↓
+Deploy new container
+      ↓
+Remove old container
+
+This gives reproducibility.
+
+26. Container + Image Relationship
+
+Suppose:
+
+resolvehub-backend:1.0
+
+is your image.
+
+You can run:
+Container A
+Container B
+Container C
+from that same image.
+
+           resolvehub-backend:1.0
+                      │
+          ┌───────────┼───────────┐
+          ↓           ↓           ↓
+       Backend-1   Backend-2   Backend-3
+       
+This is one of the foundations for scaling applications.

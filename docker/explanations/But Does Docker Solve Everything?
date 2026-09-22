@@ -1,0 +1,12 @@
+Docker:
+
+❌ Automatically fixes bad code
+❌ Automatically fixes database design
+❌ Automatically makes application secure
+❌ Automatically makes application scalable
+❌ Automatically provides Kubernetes
+❌ Automatically manages production infrastructure
+
+Docker mainly gives you:
+
+A consistent, isolated, reproducible way to package and run applications.

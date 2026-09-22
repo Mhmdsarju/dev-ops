@@ -1,0 +1,9 @@
+A tag is a human-readable label used to identify a particular image variant/version.
+
+Example:
+node:20
+node:22
+node:22-alpine
+node:22-bookworm
+
+Different tags can represent different variants.

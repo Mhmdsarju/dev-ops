@@ -1,0 +1,18 @@
+Instead of saying:
+"Install Node 22, Redis, PostgreSQL, these packages and these configurations..."
+
+we package the application into a standardized environment.
+
+Conceptually:
+
+Application
+    +
+Dependencies
+    +
+Runtime
+    +
+Configuration
+        ↓
+   Docker Image
+        ↓
+     Container

@@ -1,0 +1,22 @@
+Because Docker can reuse unchanged layers.
+
+Imagine:
+
+Build 1
+ ↓
+Base
+ ↓
+Dependencies
+ ↓
+Application
+
+You change only:
+
+src/server.ts
+
+Docker doesn't necessarily need to rebuild everything from scratch if earlier 
+layers remain reusable.
+This is called:
+Layer caching
+
+Later we'll have a dedicated topic for this because it's extremely important for optimizing Node.js Docker builds.

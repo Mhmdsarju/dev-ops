@@ -1,0 +1,15 @@
+"Immutable" means:
+Once an image is built, we don't normally modify that existing image in place.
+
+Instead:
+Old Image
+    ↓
+Change Dockerfile
+    ↓
+Build New Image
+
+Example:
+resolvehub-backend:1.0
+resolvehub-backend:1.1
+
+This is much better for reproducible deployments.
