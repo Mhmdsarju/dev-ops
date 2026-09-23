@@ -1,0 +1,29 @@
+Let's say you're developing:
+
+ResolveHub Backend
+
+Step 1 — Build
+
+docker build -t resolvehub-backend:1.0.0 .
+
+Step 2 — Tag
+
+docker tag \
+resolvehub-backend:1.0.0 \
+sarju/resolvehub-backend:1.0.0
+
+Step 3 — Login
+
+docker login
+
+Step 4 — Push
+
+docker push sarju/resolvehub-backend:1.0.0
+
+Step 5 — Production
+
+docker pull sarju/resolvehub-backend:1.0.0
+
+Step 6 — Run
+
+docker run sarju/resolvehub-backend:1.0.0

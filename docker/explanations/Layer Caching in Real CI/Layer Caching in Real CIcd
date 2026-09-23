@@ -1,0 +1,25 @@
+Layer Caching in Real CI/CD
+Imagine GitHub Actions.
+Every commit:
+git push
+   ↓
+CI
+   ↓
+docker build
+Without good caching:
+Every build
+ ↓
+Install all dependencies
+ ↓
+Build everything
+Slow.
+With proper Dockerfile structure and build caching:
+Commit
+ ↓
+docker build
+ ↓
+Reuse unchanged layers
+ ↓
+Build only changed layers
+CI/CD becomes much faster.
+Later BuildKit and registry cache

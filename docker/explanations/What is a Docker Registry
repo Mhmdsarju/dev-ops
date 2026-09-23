@@ -1,0 +1,19 @@
+
+1. What is a Docker Registry?
+
+A Docker Registry is a service that stores and distributes container images.
+
+Think of it like a repository/storage system for Docker images.
+
+Docker Image
+     ↓
+   Registry
+     ↓
+Other machine/server
+
+A registry allows you to:
+- Push images
+- Pull images
+- Store versions
+- Share images
+- Control access

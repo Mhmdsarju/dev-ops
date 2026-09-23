@@ -1,0 +1,63 @@
+Dockerfile-la commonly important instructions:
+
+Instruction	Purpose
+
+FROM	- Base image
+WORKDIR	- Working directory
+COPY	- Copy files
+ADD	- Copy/add files with extra behavior
+RUN	- Build-time command
+CMD	- Default container command
+ENTRYPOINT	- Main executable/entrypoint
+EXPOSE	- Document intended port
+ENV	- Environment variable
+ARG	- Build-time variable
+USER	- Run as specific user
+LABEL	- Image metadata
+HEALTHCHECK -	Container health check
+
+
+And:
+
+.dockerignore
+
+is also very important because it controls what gets sent in the Docker build context.
+We'll go through these properly rather than memorizing a table.
+
+🧠 One important mental model
+
+When you see:
+
+FROM node:22-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm ci
+
+COPY . .
+
+CMD ["npm", "start"]
+
+Think:
+
+FROM
+↓
+"What environment do I start with?"
+
+WORKDIR
+↓
+"Where is my application?"
+
+COPY
+↓
+"What files do I need?"
+
+RUN
+↓
+"What should happen while BUILDING the image?"
+
+CMD
+↓
+"What should happen when STARTING the container?"

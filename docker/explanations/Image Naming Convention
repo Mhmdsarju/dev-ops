@@ -1,0 +1,17 @@
+For your projects, a useful convention could be:
+
+resolvehub/backend:1.0.0
+resolvehub/agent:1.0.0
+resolvehub/frontend:1.0.0
+
+or with a registry:
+
+registry.example.com/resolvehub/backend:1.0.0
+
+Microservices:
+
+resolvehub/auth-service:1.0.0
+resolvehub/incident-service:1.0.0
+resolvehub/notification-service:1.0.0
+
+The exact naming scheme depends on your organization.

@@ -1,0 +1,18 @@
+Suppose first time build:
+
+docker build -t my-app .
+
+Docker has to execute the required build steps.
+
+Now you change only:
+
+src/server.ts
+
+and build again.
+
+Docker checks:
+"Can I reuse previous build results?"
+
+If an earlier step hasn't changed, Docker can often reuse its cached result instead of executing it again.
+That's:
+Layer caching

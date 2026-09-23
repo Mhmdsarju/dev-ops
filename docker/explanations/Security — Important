@@ -1,0 +1,16 @@
+Security — Important
+
+Never do something like:
+
+ENV DOCKER_PASSWORD=my-password
+
+or commit registry credentials into GitHub.
+
+Instead:
+- Use registry authentication mechanisms
+- Use access tokens where supported
+- Store credentials in CI/CD secret stores
+- Use short-lived credentials where possible
+- Keep private repositories private
+
+Later we'll have a dedicated security topic.

@@ -1,0 +1,75 @@
+magine:
+
+npm ci
+
+takes:
+2 minutes
+
+If every tiny source-code change causes:
+
+npm ci
+
+to run again:
+
+Change code
+ ↓
+Build
+ ↓
+Install dependencies
+ ↓
+2 minutes
+
+Developer experience becomes painful.
+But if dependencies are cached:
+
+Change code
+ ↓
+Build
+ ↓
+Reuse npm dependency layer
+ ↓
+Copy changed source
+ ↓
+Done quickly
+
+Much better.
+
+
+Better Ordering
+
+Instead:
+FROM node:22-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm ci
+
+COPY . .
+
+CMD ["npm", "start"]
+
+Now:
+
+package.json
+
+package-lock.json
+        ↓
+npm ci
+        ↓
+Dependency layer
+        ↓
+Source code
+
+If source code changes but package files don't:
+
+Dependency layer
+       ↓
+   CACHE HIT
+       ↓
+Copy source
+
+So npm install doesn't need to rerun.
+
+🔥 This is one of the most important Dockerfile optimization techniques for Node.js.

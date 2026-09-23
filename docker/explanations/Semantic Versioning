@@ -1,0 +1,20 @@
+For application images, you can use versions such as:
+
+1.0.0
+1.1.0
+1.1.1
+2.0.0
+
+Generally:
+
+MAJOR.MINOR.PATCH
+
+Example:
+
+2.4.1
+│ │ │
+│ │ └── Patch
+│ └──── Minor
+└────── Major
+
+This is a versioning convention rather than a Docker requirement.
